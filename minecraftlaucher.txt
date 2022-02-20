@@ -1,0 +1,4 @@
+# Docker Minecraft #
+# https://github.com/itzg/docker-minecraft-server/blob/master/README.md
+
+docker run -d -it --cpus=".75" -v ~/docker/minecraft/mc001:/data -v /etc/timezone:/etc/timezone:ro -e EULA=TRUE -e ENABLE_RCON=false -e DIFFICULTY=easy -e OPS=Copper208 -e MAX_PLAYERS=10 -e SNOOPER_ENABLED=false -e MODE=survival -p 25565:25565 --restart always --name mc001 itzg/minecraft-server
